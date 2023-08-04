@@ -1,4 +1,3 @@
-"import Image from 'next/image'"
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from '@/components'
 import { fetchCars } from '@/utils'
 import { HomeProps } from '@/types';
@@ -6,10 +5,6 @@ import { fuels, yearsOfProduction } from '@/constants';
 import { useState } from 'react';
 
 export default async function Home({ searchParams }: HomeProps) {
-  // const [allCars, setAllCars] = useState([])
-  // const [loading, setLoading] = useState(false)
-
-  // Search states
 
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || '',
